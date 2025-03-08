@@ -1,0 +1,40 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  title: "Notas de Crédito",
+  description: "Vende tus Notas de Crédito del SRI con rapidez, seguridad y el respaldo de expertos para potenciar tu liquidez al instante.",
+  image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&q=80&w=2000",
+  benefits: [
+    "Liquidez inmediata para tu empresa",
+    "Proceso rápido y seguro",
+    "Mejores tasas del mercado",
+    "Asesoría especializada",
+    "Sin trámites complejos",
+    "Respaldo de expertos"
+  ],
+  features: [
+    {
+      title: "Proceso Simplificado",
+      description: "Gestionamos todo el proceso de manera eficiente y transparente.",
+      icon: "⚡"
+    },
+    {
+      title: "Seguridad Garantizada",
+      description: "Operaciones respaldadas por instituciones financieras reguladas.",
+      icon: "🔒"
+    },
+    {
+      title: "Asesoría Continua",
+      description: "Te acompañamos en cada paso del proceso.",
+      icon: "👥"
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Notas de Crédito"
+  description="Optimiza tu flujo de efectivo vendiendo tus Notas de Crédito del SRI con FINMARTSOLUTIONS."
+  service={service}
+/>

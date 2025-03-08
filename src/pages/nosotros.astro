@@ -1,0 +1,412 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Sobre Nosotros";
+const description = "Conoce a FINSMARTSOLUTIONS, empresa líder en soluciones financieras inteligentes para empresarios e inversionistas en Ecuador.";
+
+// Valores de la empresa
+const valores = [
+  {
+    title: "Innovación Financiera",
+    icon: "rocket",
+    description: "Buscamos constantemente nuevas estrategias y herramientas para ofrecer soluciones efectivas y adaptadas a las necesidades de nuestros clientes."
+  },
+  {
+    title: "Educación y Empoderamiento",
+    icon: "book-open",
+    description: "Creemos que el conocimiento financiero es la base del éxito, por lo que capacitamos y guiamos a nuestros clientes para que tomen decisiones informadas."
+  },
+  {
+    title: "Transparencia y Confianza",
+    icon: "handshake",
+    description: "Actuamos con honestidad y claridad en cada asesoría, brindando información precisa y confiable para construir relaciones duraderas."
+  },
+  {
+    title: "Crecimiento Sostenible",
+    icon: "leaf",
+    description: "Promovemos el desarrollo financiero responsable, asegurando que nuestras soluciones beneficien tanto a nuestros clientes como al entorno en el que operamos."
+  },
+  {
+    title: "Orientación al Cliente",
+    icon: "target",
+    description: "Nos enfocamos en entender las necesidades individuales de cada cliente para ofrecer servicios personalizados y eficaces."
+  },
+  {
+    title: "Excelencia y Compromiso",
+    icon: "diamond",
+    description: "Nos esforzamos por brindar siempre un servicio de alta calidad, asegurando el éxito y la satisfacción de nuestros clientes."
+  }
+];
+
+// Servicios principales
+const servicios = [
+  "Notas de Crédito",
+  "Factoring",
+  "Crédito",
+  "Inversiones",
+  "Tributación Contable",
+  "Capacitación Financiera"
+];
+---
+
+<Layout {title} {description}>
+  <div class="pt-[var(--header-height)]">
+    <!-- Hero Section con imagen de fondo -->
+    <section class="relative py-24 bg-gradient-to-r from-gray-900 to-primary-900 overflow-hidden">
+      <!-- Patrones decorativos de fondo -->
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="absolute top-0 right-0 w-1/3 h-1/2 bg-primary-500 rounded-bl-full opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-1/4 h-1/3 bg-primary-500 rounded-tr-full opacity-20"></div>
+      </div>
+      
+      <!-- Imagen de fondo con filtro -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&q=80&w=2000"
+          alt="Equipo FINSMARTSOLUTIONS"
+          class="w-full h-full object-cover opacity-20 mix-blend-overlay"
+        />
+      </div>
+      
+      <div class="container relative z-10">
+        <div class="max-w-3xl text-white">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Nuestra <span class="text-primary-300">Historia</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
+            Conoce quiénes somos y cómo transformamos el futuro financiero de nuestros clientes a través de soluciones inteligentes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="py-16 bg-white">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+              Quiénes Somos
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Expertos en Soluciones Financieras Inteligentes
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              FINSMARTSOLUTIONS es una empresa especializada en ofrecer soluciones financieras inteligentes para personas naturales y jurídicas, con el objetivo de optimizar su gestión económica y potenciar su crecimiento.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              Nos enfocamos en brindar un servicio integral, combinando asesoramiento estratégico, planificación financiera, estructuración de capital, gestión de riesgos y oportunidades de inversión, junto con programas de capacitación diseñados para fortalecer el conocimiento financiero de nuestros clientes.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary-500">+10</div>
+                <div class="text-gray-600">Años de experiencia</div>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary-500">+500</div>
+                <div class="text-gray-600">Clientes satisfechos</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary-100 rounded-full"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&q=80&w=1000" 
+              alt="Equipo FINSMARTSOLUTIONS" 
+              class="rounded-lg shadow-lg relative z-10"
+            />
+            <div class="absolute -bottom-4 -right-4 bg-primary-500 text-white p-4 rounded-lg shadow-md z-20">
+              <p class="font-semibold">Soluciones financieras inteligentes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Misión, Visión -->
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Misión -->
+          <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Nuestra Misión</h3>
+            <p class="text-gray-600">
+              Ser la empresa referente a través de soluciones financieras inteligentes, brindando capacitación, asesoramiento y planificación financiera, estructuración de capital, gestión de riesgos y oportunidades de inversión. En FINSMARTSOLUTIONS, optimizamos la gestión financiera y promovemos el crecimiento económico sostenible.
+            </p>
+          </div>
+          
+          <!-- Visión -->
+          <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
+            <p class="text-gray-600">
+              Ser la empresa referente en soluciones financieras integrales, reconocida por transformar la manera en que nuestros clientes gestionan sus recursos y toman decisiones estratégicas. Buscamos impactar positivamente en la economía, impulsando un futuro financiero más inteligente y accesible para todos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestros Valores -->
+    <section class="py-16 bg-white">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            Nuestros Valores
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Principios que nos definen</h2>
+          <p class="text-gray-600">Estos valores son el fundamento de nuestro trabajo diario y la guía que nos permite ofrecer servicios de excelencia.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {valores.map(valor => (
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+              <div class="w-12 h-12 bg-primary-100 text-primary-500 rounded-full flex items-center justify-center mb-4">
+                {valor.icon === 'rocket' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                  </svg>
+                )}
+                {valor.icon === 'book-open' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                )}
+                {valor.icon === 'handshake' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                )}
+                {valor.icon === 'leaf' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                  </svg>
+                )}
+                {valor.icon === 'target' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                )}
+                {valor.icon === 'diamond' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{valor.title}</h3>
+              <p class="text-gray-600">{valor.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestros Servicios -->
+
+
+    <!-- Información de Contacto -->
+    <section class="py-16 bg-white">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+              Contacto
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              ¿Listo para impulsar tu futuro financiero?
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Visítanos en nuestras oficinas o contáctanos a través de nuestros canales digitales. Nuestro equipo está listo para asesorarte.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Dirección</h3>
+                  <p class="text-gray-600">Guayaquil, Edificio Excecutive Center, Av. Joaquin Orrantia y Av. Juan Tanca Marengo</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
+                  <p class="text-gray-600">info@finsmartsolutions.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Teléfono</h3>
+                  <p class="text-gray-600">+593 99 425 0522</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Horario de atención</h3>
+                  <p class="text-gray-600">Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 flex gap-4">
+         
+              
+
+
+
+
+
+              <a href="https://wa.me/593994250522" target="_blank" class="btn bg-[#25D366] text-white hover:bg-[#128C7E] inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16">
+                  <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+                WhatsApp
+              </a>
+              <a href="/contacto" class="btn-primary">
+                Contactar Ahora
+              </a>
+            </div>
+          </div>
+          
+          <!-- Mapa o imagen -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.016847417662!2d-79.89084692412726!3d-2.163297437724264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6dbdee51d2e1%3A0x724918fa87303646!2sExecutive%20Center!5e0!3m2!1ses-419!2sec!4v1694191840732!5m2!1ses-419!2sec" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-96"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liderazgo - CEO -->
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            Nuestro Liderazgo
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Dirección Estratégica</h2>
+          <p class="text-gray-600">Contamos con un liderazgo visionario que impulsa nuestra misión de transformar el futuro financiero de nuestros clientes.</p>
+        </div>
+        
+        <!-- CEO Profile -->
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <div class="grid md:grid-cols-3">
+            <div class="md:col-span-1 bg-primary-500/10 p-6 flex items-center justify-center">
+              <div class="text-center">
+                <div class="w-32 h-32 rounded-full bg-primary-100 mx-auto mb-4 flex items-center justify-center">
+                  <span class="text-4xl font-bold text-primary-500">JJ</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Jefferson Jiménez Ávila</h3>
+                <p class="text-primary-500 font-medium">CEO & Fundador</p>
+              </div>
+            </div>
+            <div class="md:col-span-2 p-6">
+              <p class="text-gray-600 mb-4">
+                Líder visionario con amplia experiencia en el sector financiero y una sólida formación en economía y finanzas. Su enfoque innovador y su pasión por crear soluciones financieras accesibles y efectivas ha sido fundamental para el desarrollo y crecimiento de FINSMARTSOLUTIONS.
+              </p>
+              <p class="text-gray-600 mb-4">
+                Bajo su dirección, nuestra empresa se ha consolidado como referente en el mercado de asesoría financiera, manteniendo siempre como prioridad la satisfacción de nuestros clientes y la excelencia en todos nuestros servicios.
+              </p>
+              <div class="flex space-x-4 mt-6">
+                <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="relative py-20 overflow-hidden">
+      <!-- Imagen de fondo con holograma financiero -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://img.freepik.com/foto-gratis/hermoso-diseno-holograma-criptomoneda_23-2149250220.jpg?w=1060" 
+          alt="Fondo financiero" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-700/90 to-primary-500/90"></div>
+      </div>
+
+      <div class="container relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-4xl font-bold text-white mb-6">
+            ¿Listo para transformar tu futuro financiero?
+          </h2>
+          <p class="text-xl text-white/90 mb-8">
+            En FINSMARTSOLUTIONS estamos comprometidos con tu éxito financiero. Da el primer paso hacia un futuro más próspero y contacta con nuestro equipo de expertos.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/contacto" class="btn bg-white text-primary-500 hover:bg-gray-100 transform transition-all hover:-translate-y-1 hover:shadow-lg">
+              Solicitar Asesoría
+            </a>
+            <a href="https://wa.me/593994250522" target="_blank" rel="noopener" class="btn bg-[#25D366] text-white hover:bg-[#128C7E] flex items-center transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+              </svg>
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  /* Transiciones suaves para hover en tarjetas */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/home/Hero.astro';
+import ServicesOverview from '../components/home/ServicesOverview.astro';
+import AboutUsSection from '../components/home/AboutUsSection.astro';
+import CTASection from '../components/home/CTASection.astro';
+import BuroCredito from '../components/home/BuroCredito.astro';
+
+const title = "Inicio";
+const description = "FINMARTSOLUTIONS - Soluciones financieras integrales para empresarios e inversionistas. Ofrecemos servicios de notas de crédito, factoring, inversiones y asesoría tributaria.";
+---
+
+<Layout {title} {description}>
+  <Hero />
+  
+  <ServicesOverview />
+  <AboutUsSection />
+  <BuroCredito />  
+  <CTASection />
+</Layout>

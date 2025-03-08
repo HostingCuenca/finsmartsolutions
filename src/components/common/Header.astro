@@ -1,0 +1,195 @@
+---
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/logofinmas.png';
+
+const navItems = [
+  { text: 'Inicio', href: '/' },
+  { text: 'Nosotros', href: '/nosotros' },
+  { text: 'Servicios', href: '/servicios' },
+  // { text: 'Capacitación', href: '/capacitacion' },
+  // { text: 'Blog', href: '/blog' },
+  { text: 'Contacto', href: '/contacto' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed w-full bg-white/80 backdrop-blur-lg border-b border-gray-100 z-50" id="main-header">
+  <div class="container h-[var(--header-height)] flex items-center justify-between">
+    <a href="/" class="relative group flex items-center">
+      <div class="relative flex items-center">
+        <Image 
+          src={logoImg} 
+          alt="FINSMARTSOLUTIONS Logo" 
+          width={48} 
+          height={48} 
+          class="mr-3"
+        />
+        <div class="flex flex-col">
+          <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-700">
+            FINSMARTSOLUTIONS
+          </span>
+          <span class="text-xs text-primary-600 font-medium -mt-1">Global Cash</span>
+        </div>
+      </div>
+      <span class="absolute -bottom-1 left-0 right-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <nav class="hidden md:flex items-center space-x-1">
+      {navItems.map(item => (
+         <a
+          href={item.href}
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+            currentPath === item.href
+              ? 'bg-primary-50 text-primary-500'
+              : 'text-gray-600 hover:bg-gray-50 hover:text-primary-500'
+          ]}
+        >
+          {item.text}
+        </a>
+      ))}
+      <a href="/contacto" class="ml-4 btn-primary">
+        Contáctanos
+      </a>
+    </nav>
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden p-2 text-gray-600 hover:text-primary-500"
+      aria-label="Menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        id="menu-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden absolute top-[var(--header-height)] left-0 w-full bg-white/95 backdrop-blur-lg border-b border-gray-100"
+    aria-hidden="true"
+  >
+    <nav class="container py-4 flex flex-col space-y-2">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200',
+            currentPath === item.href
+              ? 'bg-primary-50 text-primary-500'
+              : 'text-gray-600 hover:bg-gray-50 hover:text-primary-500'
+          ]}
+        >
+          {item.text}
+        </a>
+      ))}
+      <a href="/contacto" class="btn-primary text-center mt-4">
+        Contactar
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Obtener referencias a los elementos
+    const header = document.getElementById('main-header');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    
+    // Sólo proceder si los elementos existen
+    if (!mobileMenuBtn || !mobileMenu || !menuIcon) return;
+    
+    // Variable para rastrear el estado del menú
+    let menuOpen = false;
+    
+    // Función para manejar el scroll
+    const handleScroll = () => {
+      if (header && window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else if (header) {
+        header.classList.remove('scrolled');
+      }
+    };
+    
+    // Inicializar estado de scroll
+    handleScroll();
+    
+    // Toggle del menú móvil
+    const toggleMenu = () => {
+      menuOpen = !menuOpen;
+      
+      // Actualizar atributos ARIA
+      mobileMenuBtn.setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+      mobileMenu.setAttribute('aria-hidden', menuOpen ? 'false' : 'true');
+      
+      // Actualizar clases
+      if (menuOpen) {
+        mobileMenu.classList.remove('hidden');
+        // Cambiar icono a X
+        if (menuIcon instanceof SVGElement) {
+          menuIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          `;
+        }
+      } else {
+        mobileMenu.classList.add('hidden');
+        // Cambiar icono a hamburguesa
+        if (menuIcon instanceof SVGElement) {
+          menuIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          `;
+        }
+      }
+    };
+    
+    // Event listeners
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    window.addEventListener('scroll', handleScroll);
+    
+    // Cerrar menú al presionar ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuOpen) {
+        toggleMenu();
+      }
+    });
+    
+    // Cerrar menú cuando la ventana se redimensiona a tamaño desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && menuOpen) {
+        toggleMenu();
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Estilo cuando se hace scroll */
+  .scrolled {
+    @apply bg-white/95 shadow-sm;
+  }
+  
+  /* Asegurarse que el logo no se distorsione */
+  img {
+    max-height: 48px;
+    width: auto;
+  }
+  
+  /* Asegurar que el header tenga la altura correcta */
+  :root {
+    --header-height: 4.5rem;
+  }
+</style>

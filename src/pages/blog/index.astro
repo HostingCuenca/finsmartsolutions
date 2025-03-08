@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Blog";
+const description = "Mantente informado con las últimas noticias y consejos financieros de FINMARTSOLUTIONS.";
+
+const posts = [
+  {
+    title: "Cómo optimizar tus finanzas empresariales en 2025",
+    excerpt: "Descubre las mejores estrategias para maximizar la eficiencia financiera de tu empresa este año.",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&q=80&w=800",
+    date: "2025-01-15",
+    author: "María González",
+    category: "Finanzas Empresariales"
+  },
+  {
+    title: "Guía completa sobre Notas de Crédito del SRI",
+    excerpt: "Todo lo que necesitas saber sobre cómo aprovechar al máximo tus notas de crédito tributarias.",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&q=80&w=800",
+    date: "2025-01-10",
+    author: "Carlos Rodríguez",
+    category: "Tributación"
+  },
+  {
+    title: "Tendencias de inversión para 2025",
+    excerpt: "Análisis de las oportunidades de inversión más prometedoras para este año.",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&q=80&w=800",
+    date: "2025-01-05",
+    author: "Ana Martínez",
+    category: "Inversiones"
+  }
+];
+---
+
+<Layout {title} {description}>
+  <div class="pt-[var(--header-height)]">
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gray-900">
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&q=80&w=2000"
+          alt="Blog FINSMARTSOLUTIONS"
+          class="w-full h-full object-cover opacity-20"
+        />
+      </div>
+      <div class="container relative z-10">
+        <div class="max-w-3xl text-white">
+          <h1 class="text-5xl font-bold mb-6">Blog Financiero</h1>
+          <p class="text-xl text-gray-300">
+            Mantente al día con las últimas tendencias y consejos del mundo financiero.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-20 bg-gray-50">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map(post => (
+            <article class="bg-white rounded-xl overflow-hidden shadow-sm">
+              <img 
+                src={post.image} 
+                alt={post.title}
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                  <time datetime={post.date}>
+                    {new Date(post.date).toLocaleDateString('es-ES', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                  <span class="text-primary-500">{post.category}</span>
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 mb-2">
+                  {post.title}
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  {post.excerpt}
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Por {post.author}</span>
+                  <a href="#" class="text-primary-500 font-medium hover:text-primary-600">
+                    Leer más →
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-white">
+      <div class="container max-w-2xl text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Suscríbete a nuestro newsletter</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Recibe las últimas noticias y consejos financieros directamente en tu bandeja de entrada.
+        </p>
+        <form class="flex gap-4">
+          <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          />
+          <button type="submit" class="btn-primary whitespace-nowrap">
+            Suscribirse
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+</Layout>

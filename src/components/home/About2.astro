@@ -1,0 +1,40 @@
+---
+---
+
+<section class="py-20 bg-white">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&q=80&w=1000" 
+            alt="Equipo FINMARTSOLUTIONS" 
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Expertos en Soluciones Financieras
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            En FINMARTSOLUTIONS, nos dedicamos a proporcionar soluciones financieras integrales que impulsan el crecimiento sostenible de nuestros clientes. Nuestro equipo de expertos trabaja incansablemente para maximizar y proteger tu futuro financiero.
+          </p>
+          <ul class="space-y-4">
+            {[
+              "Asesoramiento financiero personalizado",
+              "Soluciones adaptadas a tus necesidades",
+              "Equipo de expertos altamente calificados",
+              "Compromiso con la excelencia",
+              "Resultados comprobados"
+            ].map(item => (
+              <li class="flex items-center space-x-3">
+                <svg class="h-6 w-6 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>

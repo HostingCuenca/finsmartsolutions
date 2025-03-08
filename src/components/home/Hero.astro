@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+---
+<section class="relative min-h-[90vh] flex items-center">
+  <!-- Background with overlay -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <img
+      src="https://img.freepik.com/foto-gratis/reunion-negocios-oficina_1268-21528.jpg?t=st=1741368684~exp=1741372284~hmac=ed985e7d8b6cd5f5c151540397660474d7ca52cce8cd6983e92d4e6d14852b69&w=1380"
+      alt="Reunión de negocios - FINSMARTSOLUTIONS"
+      class="w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-800/70"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="container relative z-10 pt-20">
+    <div class="max-w-3xl text-white">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+        Soluciones Financieras <span class="text-primary-300">Inteligentes</span>
+      </h1>
+      <p class="text-xl text-gray-200 mb-8 animate-fade-in animation-delay-200">
+        Ofrecemos las mejores alternativas de <span class="font-semibold text-primary-200">inversión y financiamiento</span> adaptadas a las necesidades específicas de empresarios e inversionistas. Impulsamos el crecimiento sostenible a través de un asesoramiento estratégico.
+      </p>
+      <div class="flex flex-wrap gap-4 animate-fade-in animation-delay-400">
+        <a href="/servicios" class="btn-primary shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 transition-all">
+          Conoce Nuestros Servicios
+        </a>
+        <a href="/contacto" class="btn bg-white text-gray-900 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Optional floating features section -->
+  <div class="absolute -bottom-16 left-0 right-0 container z-10 hidden md:block">
+    <div class="grid grid-cols-3 gap-6 bg-white rounded-xl shadow-xl p-8">
+      <div class="flex gap-4 items-start">
+        <div class="rounded-full bg-primary-50 p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h-1.5m-1.5 0h-1.5m-1.5 0h-1.5m-1.5 0h-1.5m-1.5 0h-1.5m-1.5 0h-1.5M12 3v1.5m-3-1.5v1.5m-3-1.5v1.5m-3-1.5v1.5m0 0h21" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Notas de Crédito</h3>
+          <p class="text-sm text-gray-600">Optimiza tu gestión financiera</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <div class="rounded-full bg-primary-50 p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Factoring</h3>
+          <p class="text-sm text-gray-600">Liquidez inmediata con tus facturas</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <div class="rounded-full bg-primary-50 p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Inversiones</h3>
+          <p class="text-sm text-gray-600">Maximiza tus ganancias con seguridad</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+</style>

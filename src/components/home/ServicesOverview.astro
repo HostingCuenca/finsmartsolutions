@@ -1,0 +1,105 @@
+---
+const services = [
+  {
+    title: "Notas de Crédito",
+    description: "Vende tus Notas de Crédito del SRI con rapidez, seguridad y el respaldo de expertos para potenciar tu liquidez al instante.",
+    icon: "💳",
+    link: "/servicios/notas-credito",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&q=80&w=600",
+  },
+  {
+    title: "Factoring",
+    description: "Te ofrecemos liquidez inmediata con plazos de hasta 180 días, utilizando tus facturas como garantía. Optimizamos tu financiamiento de manera eficiente y segura.",
+    icon: "📊",
+    link: "/servicios/factoring",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&q=80&w=600",
+  },
+  {
+    title: "Crédito",
+    description: "Te brindamos asesoría personalizada y te conectamos directamente con instituciones financieras confiables para optimizar tu acceso al crédito.",
+    icon: "💰",
+    link: "/servicios/credito",
+    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&q=80&w=600",
+  },
+  {
+    title: "Inversiones",
+    description: "Ofrecemos las mejores alternativas de inversión, diseñadas para maximizar tus ganancias de manera segura y eficiente con asesoría personalizada.",
+    icon: "📈",
+    link: "/servicios/inversiones",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&q=80&w=600",
+  },
+  {
+    title: "Tributación Contable",
+    description: "Servicio integral para asegurar el cumplimiento fiscal de tu empresa, optimizando tu carga tributaria de forma eficiente y segura.",
+    icon: "📋",
+    link: "/servicios/tributacion",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=600",
+  },
+  {
+    title: "Capacitaciones",
+    description: "Programas de formación financiera especializada para empresarios e inversionistas, desarrollados para potenciar tus habilidades en gestión de recursos y toma de decisiones estratégicas.",
+    icon: "🎓",
+    link: "/servicios/capacitaciones",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&q=80&w=600",
+  }
+];
+---
+<section class="py-20 mt-20">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Nuestros Servicios
+      </h2>
+      <p class="text-lg text-gray-600">
+        Soluciones financieras integrales diseñadas para impulsar el crecimiento de tu negocio y asegurar tu futuro financiero.
+      </p>
+    </div>
+    
+    <!-- Servicios en grid de 3x2 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => (
+        <a href={service.link} class="group">
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+              <div class="absolute bottom-0 left-0 p-4">
+                <div class="inline-block bg-white p-2 rounded-full mb-2">
+                  <span class="text-xl">{service.icon}</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                {service.title}
+              </h3>
+              <p class="text-gray-600 mb-4">
+                {service.description}
+              </p>
+              <span class="text-primary-500 font-medium flex items-center">
+                Conocer más
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+    
+    <!-- Botón Ver Todos -->
+    <div class="text-center mt-12">
+      <a href="/servicios" class="btn-primary inline-flex items-center">
+        Ver detalle de nuestros servicios
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

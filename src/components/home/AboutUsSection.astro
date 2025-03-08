@@ -1,0 +1,134 @@
+---
+import { Image } from 'astro:assets';
+---
+<section class="py-15 bg-gray-50" id="about-us">
+  <div class="container pt-10 pb-1">
+    <!-- Encabezado de sección -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-600 text-sm font-semibold mb-4">¿Quiénes Somos?</span>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        El equipo detrás de tu éxito financiero
+      </h2>
+      <p class="text-lg text-gray-600">
+        En FINSMARTSOLUTIONS combinamos experiencia, tecnología y un profundo conocimiento del mercado financiero ecuatoriano para ofrecerte soluciones que realmente marcan la diferencia.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Columna izquierda: Contenido principal -->
+      <div class="order-2 md:order-1">
+        <div class="bg-white p-8 rounded-xl shadow-md">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <span class="bg-primary-100 text-primary-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </span>
+            Nuestra Misión
+          </h3>
+          <p class="text-gray-700 mb-8">
+            Empoderar a empresarios e inversionistas con soluciones financieras inteligentes que maximicen sus oportunidades de crecimiento y fortalezcan su futuro económico, brindando un servicio personalizado y de excelencia.
+          </p>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <span class="bg-primary-100 text-primary-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </span>
+            Nuestra Visión
+          </h3>
+          <p class="text-gray-700 mb-8">
+            Ser reconocidos como el referente nacional en asesoría financiera integral, distinguiéndonos por nuestro compromiso con la innovación, la transparencia y los resultados tangibles para nuestros clientes.
+          </p>
+          
+          <!-- Nuestros valores -->
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <span class="bg-primary-100 text-primary-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </span>
+            Nuestros Valores
+          </h3>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-900 mb-1">Integridad</h4>
+              <p class="text-sm text-gray-600">Actuamos con honestidad y ética en cada decisión</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-900 mb-1">Excelencia</h4>
+              <p class="text-sm text-gray-600">Nos esforzamos por superar expectativas siempre</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-900 mb-1">Innovación</h4>
+              <p class="text-sm text-gray-600">Buscamos constantemente soluciones creativas</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-900 mb-1">Compromiso</h4>
+              <p class="text-sm text-gray-600">Nos dedicamos al éxito de cada cliente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Columna derecha: Imagen y stats -->
+      <div class="order-1 md:order-2">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&q=80&w=1000"
+            alt="Equipo FINSMARTSOLUTIONS"
+            class="rounded-xl shadow-lg w-full object-cover h-[500px]"
+          />
+          
+          <!-- Stats superpuestos -->
+          <div class="absolute -bottom-12 -left-6 right-6 bg-white rounded-xl shadow-xl p-6 grid grid-cols-3 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary-600">10+</div>
+              <div class="text-sm text-gray-500">Años de experiencia</div>
+            </div>
+            <div class="text-center border-l border-r border-gray-100 px-2">
+              <div class="text-3xl font-bold text-primary-600">500+</div>
+              <div class="text-sm text-gray-500">Clientes satisfechos</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary-600">Alta</div>
+              <div class="text-sm text-gray-500">Tasa de éxito</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonio destacado -->
+        <div class="bg-primary-600 text-white p-6 rounded-xl mt-16 relative">
+          <svg class="absolute top-4 left-4 w-10 h-10 text-white opacity-20" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+          </svg>
+          <div class="relative z-10">
+            <p class="italic mb-4">
+              "FINSMARTSOLUTIONS transformó nuestra gestión financiera. Su asesoría nos permitió optimizar recursos y abrir nuevas oportunidades de crecimiento."
+            </p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white font-semibold">MR</div>
+              <div class="ml-3">
+                <p class="font-medium">María Rodríguez</p>
+                <p class="text-sm text-white/70">Gerente General, Importadora RyR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="mt-24 text-center">
+      <a href="/nosotros" class="btn-primary inline-flex items-center">
+        Conoce más sobre nuestra historia
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

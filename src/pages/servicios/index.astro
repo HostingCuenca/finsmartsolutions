@@ -1,0 +1,609 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Servicios";
+const description = "Descubre nuestra gama completa de servicios financieros diseñados para impulsar tu crecimiento y maximizar tus resultados.";
+
+const services = [
+  {
+    title: "Notas de Crédito",
+    description: "Vende tus Notas de Crédito del SRI con rapidez, seguridad y el respaldo de expertos para potenciar tu liquidez al instante.",
+    icon: "credit-card",
+    link: "/servicios/notas-credito",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&q=80&w=600",
+    color: "blue",
+  },
+  {
+    title: "Factoring",
+    description: "Obtén liquidez inmediata con plazos de hasta 180 días, utilizando tus facturas como garantía y optimizando tu flujo de efectivo.",
+    icon: "chart-bar",
+    link: "/servicios/factoring",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&q=80&w=600",
+    color: "indigo",
+  },
+  {
+    title: "Crédito",
+    description: "Accede a financiamiento personalizado con asesoría integral en cada etapa del proceso, adaptado a tus necesidades empresariales.",
+    icon: "banknotes",
+    link: "/servicios/credito",
+    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&q=80&w=600",
+    color: "green",
+  },
+  {
+    title: "Inversiones",
+    description: "Maximiza tus ganancias con nuestras alternativas de inversión seguras, diseñadas para proteger y hacer crecer tu futuro financiero.",
+    icon: "presentation-chart-line",
+    link: "/servicios/inversiones",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&q=80&w=600",
+    color: "amber",
+  },
+  {
+    title: "Tributación",
+    description: "Optimiza tu carga tributaria con nuestro servicio integral de asesoría contable, asegurando el cumplimiento fiscal de tu empresa.",
+    icon: "document-check",
+    link: "/servicios/tributacion",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=600",
+    color: "purple",
+  },
+  {
+    title: "Capacitaciones",
+    description: "Programas de formación financiera especializada para empresarios e inversionistas, desarrollados para potenciar tus habilidades en gestión de recursos.",
+    icon: "academic-cap",
+    link: "/servicios/capacitaciones",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&q=80&w=600",
+    color: "rose",
+  }
+];
+
+// Agrupar servicios en dos filas de 3
+const firstRowServices = services.slice(0, 3);
+const secondRowServices = services.slice(3);
+---
+
+<Layout {title} {description}>
+  <div class="pt-[var(--header-height)]">
+    <!-- Hero Section Mejorada -->
+    <section class="relative py-24 bg-gradient-to-r from-gray-900 to-primary-900 overflow-hidden">
+      <!-- Patrones decorativos de fondo -->
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="absolute top-0 right-0 w-1/3 h-1/2 bg-primary-500 rounded-bl-full opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-1/4 h-1/3 bg-primary-500 rounded-tr-full opacity-20"></div>
+      </div>
+      
+      <!-- Gráfico financiero animado -->
+      <div class="absolute bottom-0 left-0 w-full h-24 opacity-10">
+        <svg viewBox="0 0 1200 200" preserveAspectRatio="none" class="w-full h-full">
+          <path 
+            d="M0,150 L50,145 L100,140 L150,135 L200,130 L250,120 L300,100 L350,85 L400,80 L450,90 L500,100 L550,95 L600,90 L650,70 L700,60 L750,50 L800,40 L850,45 L900,55 L950,60 L1000,65 L1050,60 L1100,45 L1150,40 L1200,30" 
+            stroke="white" stroke-width="2" fill="none"
+          ></path>
+        </svg>
+      </div>
+      
+      <!-- Imagen de fondo con filtro -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&q=80&w=2000"
+          alt="Servicios Financieros"
+          class="w-full h-full object-cover opacity-20 mix-blend-overlay"
+        />
+      </div>
+      
+      <div class="container relative z-10">
+        <div class="max-w-3xl text-white">
+          <span class="inline-block px-3 py-1 bg-primary-500/30 backdrop-blur-sm text-primary-200 rounded-full text-sm font-medium mb-4">
+            Soluciones Integrales
+          </span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Soluciones <span class="text-primary-300">Financieras</span> para Impulsar tu Negocio
+          </h1>
+          <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
+            En FINSMARTSOLUTIONS ofrecemos soluciones integrales diseñadas para maximizar tu crecimiento, optimizar recursos y asegurar un futuro financiero sólido.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#servicios" class="btn-primary shadow-lg transition-all">
+              Ver Servicios
+            </a>
+            <a href="/contacto" class="btn bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 transition-all">
+              Solicitar Asesoría
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de beneficios -->
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            ¿Por qué elegirnos?
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestra propuesta de valor</h2>
+          <p class="text-gray-600">Nos diferenciamos por nuestro enfoque personalizado y nuestro compromiso con resultados excepcionales para cada cliente.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 text-primary-500 rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Soluciones Rápidas</h3>
+            <p class="text-gray-600">Entendemos el valor del tiempo en los negocios. Obtendrás respuestas ágiles y procesos optimizados que respetan tus tiempos.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 text-primary-500 rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Máxima Seguridad</h3>
+            <p class="text-gray-600">Trabajamos con los más altos estándares de seguridad y confidencialidad para proteger tu información en todo momento.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 text-primary-500 rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Asesores Expertos</h3>
+            <p class="text-gray-600">Nuestro equipo combina años de experiencia y conocimiento especializado para brindarte la mejor asesoría personalizada.</p>
+          </div>
+        </div>
+        
+        <!-- Estadísticas -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl font-bold text-primary-500 mb-2">+10</div>
+            <div class="text-gray-600">Años de experiencia</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl font-bold text-primary-500 mb-2">+500</div>
+            <div class="text-gray-600">Clientes satisfechos</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl font-bold text-primary-500 mb-2">98%</div>
+            <div class="text-gray-600">Índice de satisfacción</div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl font-bold text-primary-500 mb-2">24/7</div>
+            <div class="text-gray-600">Soporte disponible</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid Mejorada -->
+    <section id="servicios" class="py-20 bg-white">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            Nuestros Servicios
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Soluciones financieras a tu medida</h2>
+          <p class="text-gray-600">Explora nuestra gama completa de soluciones financieras diseñadas para cada etapa de tu desarrollo empresarial.</p>
+        </div>
+        
+        <!-- Primera fila de servicios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          {firstRowServices.map(service => (
+            <a href={service.link} class="group">
+              <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-100 h-full">
+                <div class="relative h-52 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <!-- Overlay gradient -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+                  
+                  <!-- Icon container -->
+                  <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-md">
+                    {service.icon === 'credit-card' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                      </svg>
+                    )}
+                    {service.icon === 'chart-bar' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                      </svg>
+                    )}
+                    {service.icon === 'banknotes' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h-1.5m-1.5 0h-1.5m-1.5 0h-1.5m-1.5 0h-1.5m-1.5 0h-1.5M12 3v1.5m-3-1.5v1.5m-3-1.5v1.5m-3-1.5v1.5m0 0h18" />
+                      </svg>
+                    )}
+                  </div>
+                  
+                  <!-- Title overlay -->
+                  <div class="absolute bottom-0 left-0 w-full p-4">
+                    <h3 class="text-xl font-bold text-white">{service.title}</h3>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-gray-600 mb-4">{service.description}</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-primary-500 font-medium group-hover:text-primary-600 group-hover:translate-x-1 transition-transform inline-flex items-center">
+                      Conocer más
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        
+        <!-- Segunda fila de servicios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {secondRowServices.map(service => (
+            <a href={service.link} class="group">
+              <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-100 h-full">
+                <div class="relative h-52 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <!-- Overlay gradient -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+                  
+                  <!-- Icon container -->
+                  <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-md">
+                    {service.icon === 'presentation-chart-line' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                      </svg>
+                    )}
+                    {service.icon === 'document-check' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                      </svg>
+                    )}
+                    {service.icon === 'academic-cap' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                      </svg>
+                    )}
+                  </div>
+                  
+                  <!-- Title overlay -->
+                  <div class="absolute bottom-0 left-0 w-full p-4">
+                    <h3 class="text-xl font-bold text-white">{service.title}</h3>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-gray-600 mb-4">{service.description}</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-primary-500 font-medium group-hover:text-primary-600 group-hover:translate-x-1 transition-transform inline-flex items-center">
+                      Conocer más
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso de trabajo -->
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            Nuestro Proceso
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Cómo trabajamos</h2>
+          <p class="text-gray-600">Nuestro enfoque paso a paso garantiza que recibas el mejor servicio adaptado a tus necesidades específicas.</p>
+        </div>
+        
+        <div class="relative">
+          <!-- Línea conectora -->
+          <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary-100 hidden md:block"></div>
+          
+          <div class="space-y-12">
+            <!-- Paso 1 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Consulta Inicial</h3>
+                <p class="text-gray-600">Escuchamos tus necesidades y objetivos financieros para entender completamente tu situación actual.</p>
+              </div>
+              <div class="md:w-12 h-12 bg-primary-500 rounded-full text-white flex items-center justify-center font-bold text-xl z-10 mx-auto md:mx-0">1</div>
+              <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+            </div>
+            
+            <!-- Paso 2 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+              <div class="md:w-12 h-12 bg-primary-500 rounded-full text-white flex items-center justify-center font-bold text-xl z-10 mx-auto md:mx-0">2</div>
+              <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Análisis y Estrategia</h3>
+                <p class="text-gray-600">Nuestros expertos analizan tu situación y desarrollan soluciones financieras personalizadas.</p>
+              </div>
+            </div>
+            
+            <!-- Paso 3 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Implementación</h3>
+                <p class="text-gray-600">Ejecutamos las estrategias acordadas con eficiencia y transparencia, manteniendo una comunicación constante.</p>
+              </div>
+              <div class="md:w-12 h-12 bg-primary-500 rounded-full text-white flex items-center justify-center font-bold text-xl z-10 mx-auto md:mx-0">3</div>
+              <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+
+
+
+
+
+
+              <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+            </div>
+            
+            <!-- Paso 4 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+              <div class="md:w-12 h-12 bg-primary-500 rounded-full text-white flex items-center justify-center font-bold text-xl z-10 mx-auto md:mx-0">4</div>
+              <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Seguimiento y Optimización</h3>
+                <p class="text-gray-600">Monitoreamos continuamente los resultados y ajustamos estrategias para maximizar tu rendimiento financiero.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-20 bg-white">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            Testimonios
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Lo que dicen nuestros clientes</h2>
+          <p class="text-gray-600">Conoce las experiencias de quienes han confiado en nuestros servicios financieros</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+            <div class="flex items-center mb-4">
+              <div class="text-primary-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                </svg>
+              </div>
+              <div class="ml-2 text-yellow-500">
+                ★★★★★
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"El servicio de factoring nos permitió mejorar significativamente nuestro flujo de caja. El proceso fue rápido y el equipo muy profesional."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">JR</div>
+              <div class="ml-3">
+                <p class="font-medium text-gray-900">Juan Rodríguez</p>
+                <p class="text-sm text-gray-500">Director Financiero, Empresa Constructora</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+            <div class="flex items-center mb-4">
+              <div class="text-primary-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                </svg>
+              </div>
+              <div class="ml-2 text-yellow-500">
+                ★★★★★
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"La asesoría tributaria que nos brindaron fue excelente. Logramos optimizar nuestra carga fiscal de manera legal y segura. Altamente recomendados."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">ML</div>
+              <div class="ml-3">
+                <p class="font-medium text-gray-900">María Lara</p>
+                <p class="text-sm text-gray-500">Gerente General, Importadora</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+            <div class="flex items-center mb-4">
+              <div class="text-primary-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                </svg>
+              </div>
+              <div class="ml-2 text-yellow-500">
+                ★★★★★
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"Gracias a sus recomendaciones de inversión, hemos diversificado nuestros activos y mejorado considerablemente nuestros rendimientos financieros."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">AC</div>
+              <div class="ml-3">
+                <p class="font-medium text-gray-900">Andrés Campos</p>
+                <p class="text-sm text-gray-500">Empresario, Sector Tecnológico</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Botón para ver más testimonios -->
+        <div class="text-center mt-10">
+          <a href="#" class="inline-flex items-center text-primary-500 font-medium hover:text-primary-600">
+            Ver más testimonios
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+            Preguntas Frecuentes
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Resolvemos tus dudas</h2>
+          <p class="text-gray-600">Encuentra respuestas a las preguntas más comunes sobre nuestros servicios financieros</p>
+        </div>
+        
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <details class="group border-b border-gray-200">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-900">¿Cuánto tiempo toma el proceso de factoring?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-500 group-open:rotate-180 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 text-gray-600">
+              <p>El proceso de factoring generalmente toma entre 24 y 48 horas desde la aprobación de la documentación. Trabajamos para brindarte liquidez lo más rápido posible, optimizando cada paso del proceso.</p>
+            </div>
+          </details>
+          
+          <details class="group border-b border-gray-200">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-900">¿Qué documentos necesito para solicitar una nota de crédito?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-500 group-open:rotate-180 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 text-gray-600">
+              <p>Para solicitar una nota de crédito, generalmente necesitarás presentar la documentación emitida por el SRI, identificación oficial, información bancaria y documentos que acrediten la titularidad de la nota. Nuestro equipo te guiará en todo el proceso de documentación.</p>
+            </div>
+          </details>
+          
+          <details class="group border-b border-gray-200">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-900">¿Cómo puedo saber qué tipo de inversión es adecuada para mí?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-500 group-open:rotate-180 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 text-gray-600">
+              <p>Realizamos un análisis completo de tu perfil de inversor, considerando tus objetivos financieros, horizonte temporal, tolerancia al riesgo y situación fiscal. Con base en estos factores, nuestros asesores te recomendarán las opciones de inversión más adecuadas para ti.</p>
+            </div>
+          </details>
+          
+          <details class="group border-b border-gray-200">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-900">¿Ofrecen asesoría para empresas en crecimiento?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-500 group-open:rotate-180 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 text-gray-600">
+              <p>Sí, contamos con programas especializados para empresas en etapa de crecimiento. Nuestros servicios incluyen asesoría financiera estratégica, optimización de estructura de capital, planificación fiscal y acceso a financiamiento especializado para impulsar tu expansión.</p>
+            </div>
+          </details>
+          
+          <details class="group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-900">¿Cuáles son las ventajas de sus programas de capacitación?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-primary-500 group-open:rotate-180 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 text-gray-600">
+              <p>Nuestros programas de capacitación son impartidos por expertos del sector financiero con amplia experiencia práctica. Ofrecemos contenido actualizado, enfoque práctico orientado a resultados, grupos reducidos para atención personalizada y seguimiento post-capacitación para asegurar la implementación efectiva de los conocimientos adquiridos.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Mejorado con imagen de holograma financiero -->
+    <section class="relative py-20 overflow-hidden">
+      <!-- Imagen de fondo con holograma de criptomonedas y overlay azul -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://img.freepik.com/foto-gratis/hermoso-diseno-holograma-criptomonedas_23-2149250210.jpg?w=1060" 
+          alt="Fondo financiero" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-700/90 to-primary-500/90"></div>
+      </div>
+      
+      <!-- Elementos gráficos financieros -->
+      <div class="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+        <!-- Líneas de gráficos con animación -->
+        <svg class="absolute w-full h-24 left-0 right-0 bottom-0 opacity-20" viewBox="0 0 1200 200" preserveAspectRatio="none">
+          <path d="M0,100 L50,80 L100,120 L150,60 L200,80 L250,40 L300,70 L350,30 L400,50 L450,20 L500,70 L550,40 L600,90 L650,60 L700,100 L750,70 L800,110 L850,80 L900,130 L950,90 L1000,140 L1050,100 L1100,150 L1150,110 L1200,160" 
+                stroke="white" stroke-width="2" fill="none" class="animate-pulse-slow">
+          </path>
+        </svg>
+      </div>
+
+      <div class="container relative z-20">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            ¿Listo para impulsar tu futuro financiero?
+          </h2>
+          <p class="text-xl text-white/90 mb-8">
+            Agenda una consulta gratuita con nuestros expertos y descubre cómo podemos ayudarte a alcanzar tus objetivos financieros.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/contacto" class="btn bg-white text-primary-500 hover:bg-gray-100 transform transition-all hover:-translate-y-1 hover:shadow-lg">
+              Contactar Ahora
+            </a>
+            <a href="https://wa.me/593994250522" target="_blank" rel="noopener" class="btn bg-[#25D366] text-white hover:bg-[#128C7E] flex items-center transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+              </svg>
+              WhatsApp
+            </a>
+            <a href="/servicios" class="btn border-2 border-white text-white hover:bg-white/20 transition-all">
+              Ver Servicios
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  /* Animaciones personalizadas */
+  @keyframes pulse-slow {
+    0%, 100% { 
+      transform: translateY(0);
+      opacity: 0.2;
+    }
+    50% { 
+      transform: translateY(-10px);
+      opacity: 0.3;
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 15s infinite ease-in-out;
+  }
+  
+  /* Estilos para los detalles (FAQ) */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Transiciones suaves para hover en tarjetas */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+</style>
