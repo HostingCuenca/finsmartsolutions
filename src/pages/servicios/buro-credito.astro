@@ -1,0 +1,40 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+    title: "Buró de Crédito",
+    description: "Obtenga información crediticia precisa y actualizada para tomar decisiones financieras informadas sobre personas y empresas.",
+    image: "https://assets.equifax.com/marketing/ecuador/images/informe_credito_360.webp",
+    benefits: [
+        "Datos actualizados y precisos para evaluación de riesgos",
+        "Análisis personalizado de la información crediticia",
+        "Confidencialidad total en el manejo de datos",
+        "Decisiones financieras respaldadas por información confiable",
+        "Reducción de riesgos en operaciones crediticias",
+        "Respuesta rápida en 24 horas"
+    ],
+    features: [
+        {
+            title: "Informes Detallados",
+            description: "Acceda a informes crediticios exhaustivos con historial de pagos, deudas actuales y calificación crediticia.",
+            icon: "📋"
+        },
+        {
+            title: "Análisis Predictivo",
+            description: "Utilizamos algoritmos avanzados para evaluar tendencias y predecir comportamientos crediticios futuros.",
+            icon: "📊"
+        },
+        {
+            title: "Seguridad Garantizada",
+            description: "Toda la información es tratada con los más altos estándares de seguridad y privacidad del mercado.",
+            icon: "🔒"
+        }
+    ]
+};
+---
+
+<ServiceLayout
+        title="Buró de Crédito"
+        description="Servicio de información crediticia precisa y actualizada para una evaluación de riesgos efectiva en sus operaciones financieras."
+        service={service}
+/>

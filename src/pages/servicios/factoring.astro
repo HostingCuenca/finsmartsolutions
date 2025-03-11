@@ -1,0 +1,40 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+    title: "Factoring",
+    description: "Obtén liquidez inmediata con plazos de hasta 180 días, utilizando tus facturas como garantía y optimizando tu flujo de efectivo.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&q=80&w=2000",
+    benefits: [
+        "Proceso de calificación rápido",
+        "Mejora el flujo de efectivo empresarial",
+        "No genera endeudamiento financiero",
+        "No requiere garantías físicas",
+        "Convierte activos improductivos en liquidez",
+        "Acelera el ciclo operativo de tu empresa"
+    ],
+    features: [
+        {
+            title: "Adelanto Inmediato",
+            description: "Recibe hasta el 90% del valor de tus facturas al instante, sin esperar al vencimiento.",
+            icon: "💰"
+        },
+        {
+            title: "Gestión de Cobranza",
+            description: "Nos encargamos del proceso de cobranza, permitiéndote enfocarte en tu negocio.",
+            icon: "📊"
+        },
+        {
+            title: "Flexibilidad Total",
+            description: "Elige qué facturas deseas convertir en efectivo según tus necesidades.",
+            icon: "🔄"
+        }
+    ]
+};
+---
+
+<ServiceLayout
+        title="Factoring"
+        description="Optimiza el flujo de caja de tu empresa convirtiendo tus facturas por cobrar en liquidez inmediata con nuestro servicio de Factoring."
+        service={service}
+/>

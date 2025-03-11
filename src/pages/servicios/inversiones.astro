@@ -1,0 +1,40 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+    title: "Inversiones",
+    description: "Maximiza tus ganancias con nuestras alternativas de inversión seguras, diseñadas para proteger y hacer crecer tu futuro financiero.",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&q=80&w=2000",
+    benefits: [
+        "Estrategia personalizada según tu perfil de riesgo",
+        "Diversificación inteligente de portafolio",
+        "Rentabilidad garantizada con tasas competitivas",
+        "Seguridad y transparencia en cada operación",
+        "Acompañamiento continuo por expertos financieros",
+        "Acceso a oportunidades exclusivas del mercado"
+    ],
+    features: [
+        {
+            title: "Asesoría Integral",
+            description: "Evaluamos tus objetivos financieros y creamos un plan de inversión personalizado para maximizar tus rendimientos.",
+            icon: "🧠"
+        },
+        {
+            title: "Opciones Diversificadas",
+            description: "Accede a un amplio portafolio de productos de inversión adaptados a diferentes perfiles de riesgo y objetivos.",
+            icon: "📊"
+        },
+        {
+            title: "Monitoreo Constante",
+            description: "Seguimiento continuo de tus inversiones con informes periódicos sobre el rendimiento y ajustes estratégicos.",
+            icon: "📱"
+        }
+    ]
+};
+---
+
+<ServiceLayout
+        title="Inversiones"
+        description="Haz crecer tu patrimonio con nuestras soluciones de inversión personalizadas, seguras y rentables diseñadas por expertos financieros."
+        service={service}
+/>

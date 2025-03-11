@@ -1,0 +1,40 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+    title: "Crédito",
+    description: "Accede a financiamiento personalizado con asesoría integral en cada etapa del proceso, adaptado a tus necesidades empresariales.",
+    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&q=80&w=2000",
+    benefits: [
+        "Acceso a las mejores opciones de financiamiento",
+        "Acompañamiento personalizado durante todo el proceso",
+        "Evaluaciones detalladas de tu perfil crediticio",
+        "Asesoría especializada en productos financieros",
+        "Agilización de trámites administrativos",
+        "Tasas competitivas adaptadas a tu perfil"
+    ],
+    features: [
+        {
+            title: "Análisis Personalizado",
+            description: "Evaluamos tu situación financiera para encontrar la solución de crédito que mejor se adapte a tus necesidades.",
+            icon: "📈"
+        },
+        {
+            title: "Múltiples Opciones",
+            description: "Trabajamos con diversas instituciones financieras para ofrecerte las mejores condiciones del mercado.",
+            icon: "🏦"
+        },
+        {
+            title: "Seguimiento Continuo",
+            description: "Te acompañamos desde la solicitud hasta la aprobación y desembolso de tu crédito.",
+            icon: "👥"
+        }
+    ]
+};
+---
+
+<ServiceLayout
+        title="Crédito"
+        description="Soluciones de financiamiento a medida con las mejores condiciones del mercado y asesoría experta para tu empresa."
+        service={service}
+/>

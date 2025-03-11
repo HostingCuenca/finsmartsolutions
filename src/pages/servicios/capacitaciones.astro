@@ -1,0 +1,40 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+    title: "Capacitaciones",
+    description: "Programas de formación financiera especializada para empresarios e inversionistas, desarrollados para potenciar tus habilidades en gestión de recursos.",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&q=80&w=2000",
+    benefits: [
+        "Formación especializada en finanzas y gestión empresarial",
+        "Capacitación práctica y aplicada a casos reales",
+        "Modalidades flexibles adaptadas a tu disponibilidad",
+        "Certificación reconocida en el sector financiero",
+        "Instructores con amplia experiencia en el mercado",
+        "Contenido actualizado con las últimas tendencias"
+    ],
+    features: [
+        {
+            title: "Programas Personalizados",
+            description: "Diseñamos capacitaciones adaptadas a las necesidades específicas de tu empresa o equipo directivo.",
+            icon: "📚"
+        },
+        {
+            title: "Metodología Práctica",
+            description: "Aprendizaje basado en casos reales y ejercicios prácticos para una aplicación inmediata de conocimientos.",
+            icon: "🧩"
+        },
+        {
+            title: "Seguimiento Post-Formación",
+            description: "Ofrecemos asesoría continua después de las capacitaciones para resolver dudas y asegurar la implementación efectiva.",
+            icon: "🔄"
+        }
+    ]
+};
+---
+
+<ServiceLayout
+        title="Capacitaciones"
+        description="Programas de formación financiera especializada con enfoque práctico para empresarios e inversionistas que buscan potenciar sus habilidades."
+        service={service}
+/>
