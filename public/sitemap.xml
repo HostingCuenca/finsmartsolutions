@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página principal -->
+    <url>
+        <loc>https://finsmartsolutions.info/</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Página Nosotros -->
+    <url>
+        <loc>https://finsmartsolutions.info/nosotros</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Página principal de Servicios -->
+    <url>
+        <loc>https://finsmartsolutions.info/servicios</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Subpáginas de Servicios -->
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/notas-credito</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/factoring</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/credito</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/inversiones</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/tributacion</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/capacitaciones</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://finsmartsolutions.info/servicios/buro-credito</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Página de Contacto -->
+    <url>
+        <loc>https://finsmartsolutions.info/contacto</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
