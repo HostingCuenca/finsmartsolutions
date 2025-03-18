@@ -5,20 +5,46 @@ import ServicesOverview from '../components/home/ServicesOverview.astro';
 import AboutUsSection from '../components/home/AboutUsSection.astro';
 import CTASection from '../components/home/CTASection.astro';
 import BuroCredito from '../components/home/BuroCredito.astro';
+import Mantenimiento from '../components/home/Mantenimiento.astro';
 
 const title = "Inicio";
 const description = "FINSMARTSOLUTIONS - Soluciones financieras integrales para empresarios e inversionistas. Ofrecemos servicios de notas de crédito, factoring, inversiones y asesoría tributaria.";
 ---
 
-<Layout {title} {description}>
-  <Hero />
+<!--<Layout {title} {description}>-->
+<!--  <Hero />-->
 
-  <ServicesOverview />
-  <BuroCredito />
-  <AboutUsSection />
+<!--  <ServicesOverview />-->
+<!--  <BuroCredito />-->
+<!--  <AboutUsSection />-->
 
-  <CTASection />
-</Layout>
+<!--  <CTASection />-->
+<!--</Layout>-->
+
+
+<!--<Layout {title} {description}>-->
+  <Mantenimiento />
+<!--</Layout>-->
+
+<script>
+  // Script adicional para asegurar que los usuarios sean redirigidos a la página de mantenimiento
+  // Este script es una capa extra de seguridad en caso de que el middleware no esté funcionando
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    // Si no estamos en la página de mantenimiento y no estamos cargando recursos
+    if (
+        !currentPath.includes('mantenimiento') &&
+        !currentPath.endsWith('.css') &&
+        !currentPath.endsWith('.js') &&
+        !currentPath.endsWith('.svg') &&
+        !currentPath.endsWith('.png') &&
+        !currentPath.endsWith('.jpg') &&
+        !currentPath.includes('/assets/')
+    ) {
+      window.location.href = '/mantenimiento';
+    }
+  });
+</script>
 
 
 
