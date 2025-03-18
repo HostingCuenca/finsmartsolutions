@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 // import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://finmartsolutions.info',
+  site: 'https://finsmartsolutions.info',
   integrations: [
     tailwind(),
     sitemap()
