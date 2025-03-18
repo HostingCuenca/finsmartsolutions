@@ -3,6 +3,7 @@ export function onRequest({ request, redirect, locals }, next) {
     const url = new URL(request.url);
 
     // Permitir acceso a la página de mantenimiento directamente
+    // Permitir acceso a la página de mantenimiento directamente
     if (url.pathname === '/mantenimiento' || url.pathname === '/mantenimiento/') {
         return next();
     }
